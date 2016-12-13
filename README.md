@@ -1,5 +1,7 @@
 # Simple Options
 
+[![Build Status](https://travis-ci.org/SVogelsang/simple-options.svg?branch=master)](https://travis-ci.org/SVogelsang/simple-options)
+
 This component merges given options with default options. It raises an error if required options are missing.
 
 ### Installation
