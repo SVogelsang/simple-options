@@ -37,7 +37,7 @@ var usedOptions = options({name: 'a'}, {name: undefined});
 
 Result:
 ```js
-{name: 'a'}
+var usedOptions = {name: 'a'}
 ```
 
 ##### Raise error if required options are missing:
@@ -56,7 +56,7 @@ var usedOptions = options({name: 'a', items: ['a', 'b']}, {name: undefined, item
 
 Result:
 ```js
-{name: 'a', items: ['a', 'b', 'z']}
+var usedOptions = {name: 'a', items: ['a', 'b', 'z']}
 ```
 
 ```js
@@ -66,7 +66,17 @@ var usedOptions = options({name: 'a', items: ['a', 'b', 'c']}, {name: undefined,
 
 Result:
 ```js
-{name: 'a', items: ['a', 'b', 'c']}
+var usedOptions = {name: 'a', items: ['a', 'b', 'c']}
+```
+
+```js
+var options = require('../lib/simple-options');
+var usedOptions = options({item: {name: 'A'}}, {item: {name: 'B'}}], [{item: {name: 'C', number: 2}}, {item: {name: 'D', number: 2}}]);
+```
+
+Result:
+```js
+var usedOptions = [{item: {name: 'A', number: 2}}, {item: {name: 'B', number: 2}}]
 ```
 
 
@@ -74,4 +84,4 @@ For more examples see [tests](./test/simple-options.spec.js).
 
 ### License
 
-MIT
+[MIT](./LICENSE)
