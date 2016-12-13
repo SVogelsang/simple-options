@@ -1,0 +1,22 @@
+{
+  "name": "simple-options",
+  "version": "0.0.1",
+  "description": "Simple options creator with required and default options.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SVogelsang/simple-options.git"
+  },
+  "main": "lib/simple-options.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "options"
+  ],
+  "author": "SVogelsang",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  }
+}
