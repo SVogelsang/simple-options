@@ -43,8 +43,25 @@ describe('simple options', function() {
       should(sut({items: ['A', 'B', 'C']}, {items: ['C', 'D']})).deepEqual({items: ['A', 'B', 'C']});
     });
 
-    it('should not fail if source array contains more elements than defaults', function() {
-      should(sut({items: ['A', 'B', 'C']}, {items: ['C', 'D']})).deepEqual({items: ['A', 'B', 'C']});
+  });
+
+  describe('deep hierarchie', function(){
+
+    it('should use default if value is missing', function() {
+      should(sut({}, {item: {name: 'B'}})).deepEqual({item: {name: 'B'}});
+    });
+
+    it('should merge objects deep', function() {
+      should(sut({item: {name: 'A'}}, {item: {name: 'B', number: 10}})).deepEqual({item: {name: 'A', number: 10}});
+    });
+
+    it('should merge array elements', function() {
+      should(sut([{item: {name: 'A'}}, {item: {name: 'B'}}], [{item: {name: 'C', number: 2}}, {item: {name: 'D', number: 2}}])).deepEqual([{item: {name: 'A', number: 2}}, {item: {name: 'B', number: 2}}]);
+    });
+
+    it('should use defaults for missing array elements', function() {
+      should(sut([{item: {name: 'A'}}, {item: {name: 'B'}}], [{item: {name: 'C', number: 2}}, {item: {name: 'D', number: 2}}, {item: {name: 'E', number: 3}}]))
+        .deepEqual([{item: {name: 'A', number: 2}}, {item: {name: 'B', number: 2}}, {item: {name: 'E', number: 3}}]);
     });
 
   });
