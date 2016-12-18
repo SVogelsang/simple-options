@@ -71,7 +71,7 @@ var usedOptions = {name: 'a', items: ['a', 'b', 'c']}
 
 ```js
 var options = require('../lib/simple-options');
-var usedOptions = options({item: {name: 'A'}}, {item: {name: 'B'}}], [{item: {name: 'C', number: 2}}, {item: {name: 'D', number: 2}}]);
+var usedOptions = options([{item: {name: 'A'}}, {item: {name: 'B'}}], [{item: {name: 'C', number: 2}}, {item: {name: 'D', number: 2}}]);
 ```
 
 Result:
