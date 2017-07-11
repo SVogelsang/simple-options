@@ -1,6 +1,6 @@
 {
   "name": "simple-options",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple options creator with required and default options.",
   "repository": {
     "type": "git",
