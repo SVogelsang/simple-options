@@ -20,7 +20,7 @@ npm install --save simple-options
   * If an item does not exist in the source array it is filled with the value from the defaults.
   * If the source array contains more elements than the defaults the additional valus are kept without any error.
   * The elements of an array are merged as well (recursivly).
-* required options are specified by mention them in the defaults as **undefined**.
+* required options are specified by mention them in the defaults as **undefined** or **null**.
 
 ### Restrictions
 
