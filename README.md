@@ -82,6 +82,41 @@ var usedOptions = [{item: {name: 'A', number: 2}}, {item: {name: 'B', number: 2}
 
 For more examples see [tests](./test/simple-options.spec.js).
 
+### Use with Express
+
+Simple options can be used with [Express](expressjs.com) where options are passed either as body or query parameters. In case of an error (e.g. a required parameter is missing) a 400 HTTP status is send.
+
+#### Examples
+
+```js
+var options = require('../lib/simple-options');
+var controller = function(req, res) {
+  options.fromBody(req, res, {name: null}, function(err, options){
+    
+    if(err){
+      return console.log(err);
+    }
+    
+    // do something with the options
+  });  
+}
+```
+
+```js
+var options = require('../lib/simple-options');
+var controller = function(req, res) {
+  options.fromQuery(req, res, {name: 'default name'}, function(err, options){
+    
+    if(err){
+      return console.log(err);
+    }
+    
+    // do something with the options
+  });  
+}
+```
+
+
 ### License
 
 [MIT](./LICENSE)

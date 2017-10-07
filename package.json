@@ -1,6 +1,6 @@
 {
   "name": "simple-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple options creator with required and default options.",
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^3.2.0",
-    "should": "^11.1.2"
+    "should": "^11.1.2",
+    "sinon": "^4.0.1"
   }
 }
