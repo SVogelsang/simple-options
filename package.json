@@ -16,7 +16,7 @@
   "author": "SVogelsang",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^3.2.0",
+    "mocha": "^10.2.0",
     "should": "^11.1.2",
     "sinon": "^4.0.1"
   }
